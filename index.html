@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+	<title>Bootstrap Tour Demo</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-tour.min.css">
+
+	<style>
+
+		.row {
+			margin: 50px;
+		}
+
+	</style>
+
+</head>
+<body>
+
+<div class="container text-center">
+	<div class="row">
+		<div class="col-md-12">
+			<button class="btn btn-danger" id="my-element">First Step</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<button class="btn btn-success" id="my-other-element">Second Step</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<button class="btn btn-info" id="my-other-other-element">Third Step</button>
+		</div>
+	</div>
+</divs>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-tour.min.js"></script>
+
+<script>
+
+// Instance the tour
+var tour = new Tour({
+  steps: [
+  {
+    element: "#my-element",
+    title: "Title of my step",
+    content: "Content of my step"
+  },
+  {
+    element: "#my-other-element",
+    title: "Title of my step",
+    content: "Content of my step"
+  }
+  ,
+  {
+    element: "#my-other-other-element",
+    title: "Title of my step",
+    content: "Content of my step"
+  }
+]});
+
+// Initialize the tour
+tour.init();
+
+// Start the tour
+tour.start();
+
+</script>
+
+</body>
